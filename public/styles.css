@@ -1,0 +1,86 @@
+:root {
+   --main-width: 25em;
+   --main-margin: 1em;
+   --logo-height: 2em;
+}
+* {
+   margin: 0;
+   padding: 0;
+}
+body {
+   font-family: 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
+}
+#background {
+   position: absolute;
+   z-index: -1;
+   height: 100%;
+   width: 100%;
+   margin: -1em;
+   filter: blur(2em); 
+}
+.container {
+   transform: scale(0.9);
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+   margin-bottom: var(--main-margin)
+}
+#img {
+   height: var(--main-width);
+   width: var(--main-width);
+   border-top-left-radius: var(--main-margin);
+   border-top-right-radius: var(--main-margin);
+}
+#description {
+   background-color: black;
+   color: white;
+   width: 22.8em;
+   text-align: center;
+   padding-top: 1.5em;
+   padding-bottom: 1.5em;
+   font-size: 1.1em;
+}
+#smaller-container {
+   display: flex;
+   flex-direction: column;
+   width: var(--main-width);
+   border-bottom-left-radius: var(--main-margin);
+   border-bottom-right-radius: var(--main-margin);
+   background-color: white;
+   user-select: none;
+}
+.logo-container {
+   height: 2.5em;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border-bottom: 2px solid #f1f0ec;
+   padding: 1em;
+}
+#apple-music-container {
+   border: none;
+}
+.logo-container:hover {box-shadow: 0px 0px 13px -1px rgba(0,0,0,0.5);}
+.logo-text {
+   font: 400 13.3333px Arial;
+   font-weight: 600;
+   color: rgb(71, 71, 71);
+   border: 1px solid rgb(228, 219, 219);
+   padding: 0.5em;
+   text-decoration: none;
+   color: #333;
+   border-radius: 1em;
+   font-size: 0.9em;
+   padding: 0.4em 1em;
+}
+.logo-text:hover {
+   text-decoration: none;
+   background-color: #333;
+   color: white;
+}
+#discord {height: 3em;}
+#youtube {height: 5em;}
+#spotify {height: 2.7em;}
+#soundcloud {height: 1em;}
+#apple-music {height: 2.15em;}
