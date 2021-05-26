@@ -2,6 +2,8 @@
    --main-width: 25em;
    --main-margin: 1em;
    --logo-height: 2em;
+   --main-theme: #f04747;
+   --main-dark: #2f3136;
 }
 * {
    margin: 0;
@@ -9,22 +11,43 @@
 }
 body {
    font-family: 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
+   overflow-x: hidden;
 }
-#background {
+.modalContainer {
+   top: -0.5em;
+   display: inline-block;
    position: absolute;
-   z-index: -1;
-   height: 100%;
-   width: 100%;
-   margin: -1em;
-   filter: blur(2em); 
+   background-color: rgba(0, 0, 0, 0.274);
+   height: 130vh;
+   width: 100vw;
 }
-.container {
-   transform: scale(0.9);
+@media (max-width: 440px){
+   .modalContainer {
+      height: 141.5vh;
+   }
+}
+.modal {
    display: flex;
    justify-content: center;
    flex-direction: column;
    align-items: center;
    margin-bottom: var(--main-margin)
+}
+.modalClose {
+   background-color: white;
+   border-radius: 1.5em;
+   padding: 0.5em 1em;
+   border: 3px solid black;
+   margin: 1em auto;
+   width: 3em;
+}
+.modalClose p {
+   display: block;
+   text-align: center;
+}
+.modalClose:hover {
+   background-color: rgb(224, 224, 224);
+   cursor: pointer;
 }
 #img {
    height: var(--main-width);
@@ -84,3 +107,57 @@ body {
 #spotify {height: 2.7em;}
 #soundcloud {height: 1em;}
 #apple-music {height: 2.15em;}
+
+.GreetingContainer {
+   height: 100vh;
+   width: 100vw;
+   display: flex;
+   padding-top: 5em;
+   justify-content: flex-start;
+   align-items: center;
+   flex-direction: column;
+}
+.DarkGreetingContainer { background-color: var(--main-dark)}
+.LightGreetingContainer { background-color: white;}
+
+.GreetingTitle {
+   border-bottom: 0.33em solid var(--main-theme);
+   font-size: 3em;
+}
+.DarkGreetingTitle {color: white}
+.LightGreetingTitle {color: black}
+/* icons  */
+#GreetingButtonsContainer {
+   display: flex;
+   flex-direction: row;
+}
+#GreetingButtonsContainer i {
+   margin: 0.5em;
+   font-size: 1.5em;
+   border-radius: 50%;
+   padding: 0.5em;
+   background-color: white;
+}
+#GreetingButtonsContainer *:hover {
+   transition: 500ms;
+   transform: rotate(360deg);
+   cursor: pointer;
+}
+/* sun  */
+#GreetingButtonsContainer #sun {
+   background-color: #42a2da;
+   border: 3px solid #f5cb11;
+   color: #f5cb11;
+}
+/* moon  */
+#GreetingButtonsContainer #moon {
+   background-color: black;
+   border: 3px solid rgb(184, 184, 184);
+   color: white;
+}
+/* music  */
+#GreetingButtonsContainer #music {
+   background-color: white;
+   border: 3px solid #FF69B4;
+   color: #FF69B4;
+}
