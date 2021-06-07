@@ -4,4 +4,4 @@ If you want to use the files, just copy the public folder (no need for the src f
 
 <br>
 
-Since JavaScript runs on any browser, you don't any any config files.
+Since JavaScript runs on any browser, you don't need any config files.
